@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cokoladovna UWT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1><span>čokoládovňa</span> UWT</h1>
+
+    <div class="grid-container">
+      <nav>
+        <div class="nav-child-div">úvod</div>
+        <div class="nav-child-div">ponuka</div>
+        <div class="nav-child-div">objednávka</div>
+        <div class="nav-child-div">kontakt</div>
+      </nav>
+
+      <aside class="shopping-cart">
+        <h4>Nákupný košík :</h4>
+
+        <p class="empty">je prázdny</p>
+
+        <div class="btn-container">
+          <div class="clear-cart">clear cart</div>
+          <div class="send-your-order">send your order</div>
+        </div>
+
+        <div class="cart-items-container">
+          <div class="cart-head">
+            <p>Choco</p>
+            <p>Price</p>
+            <p>Units</p>
+          </div>
+          <div class="cart-el">
+            <!--Rendering cart Elements dynamically using JS-->
+          </div>
+          <div class="total-price-div">
+            <!--Rendering Total Price value-->
+            <p>Total Price :</p>
+            <p class="subtotal">&#8364;5</p>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <h2>Naša ponuka</h2>
+
+        <div class="products-container">
+          <!--Render product items : -->
+        </div>
+      </main>
+
+      <div class="new">
+        <img src="images/box.png" alt="box" />
+        <p>
+          Novinka: Skvelý darček na každú príležitosť - 15 belgických praliniek
+          v nádhernom balení len za 10,99 &#8364;.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p class="name-footer">Coded by <span>Othman Al ghandour</span></p>
+      <p>
+        &#169; &#218;WT team (K&#211;D), Mlynská dolina, 842 48 Bratislava,
+        cokolada-pralinky.cz, darkydnes.cz, sk.wikipedia.org, 2016,<br />Kontak:
+        coko@uwt.sk, tel: +421 2 123 456
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

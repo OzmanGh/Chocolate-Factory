@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 5px 0 8px 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 15px;
+}
+
+h1 span,
+.product-name span {
+  text-transform: capitalize;
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* nav bar */
+
+nav {
+  border: 4px double #ff9999;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+}
+
+nav div {
+  transition: background-color 0.15s, color 0.15s;
+  color: #330000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav div:hover {
+  background-color: #330000;
+  color: rgb(255, 247, 224);
+}
+
+/* Sidebar */
+
+aside {
+  background-color: rgb(229, 216, 197);
+  padding: 2px 10px;
+  margin: 15px;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  position: relative;
+  overflow: scroll;
+}
+
+aside h4 {
+  font-size: 1.3rem;
+}
+
+aside h4,
+.empty {
+  padding: 10px;
+}
+
+/* Styling cart Items && btns*/
+
+.cart-items-container {
+  padding-top: 0.5em;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  row-gap: 1rem;
+}
+
+/*Cart Head*/
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(63, 17, 17);
+  color: #fff;
+  padding: 6px;
+}
+
+/* items content */
+
+.items-elements {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+.items-elements:last-child {
+  margin-bottom: 0;
+}
+
+.cart-img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.numberOfItems {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  column-gap: 3px;
+}
+
+.number-of-pieces {
+  font-size: 1.1rem;
+}
+
+.btn {
+  color: #fff;
+  background-color: rgb(63, 17, 17);
+  padding: 5px;
+  border-radius: 50%;
+  align-self: center;
+  cursor: pointer;
+}
+
+/*Green && Red Cart buttons */
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.clear-cart {
+  font-family: "Sacramento", sans-serif;
+  background-color: red;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.send-your-order {
+  font-family: "Sacramento", sans-serif;
+  color: #fff;
+  background-color: green;
+  width: fit-content;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+/* Main Content && media Queries  */
+main {
+  background-image: url("../images/background.jpg");
+  color: rgb(255, 247, 224);
+  padding-bottom: 20px;
+}
+
+main header h1 {
+  margin: 0 0 0 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "sidebar"
+    "main-content"
+    "new";
+}
+
+/* Total Price pseudo-element*/
+
+.total-price-div,
+.cart-head {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  background-color: rgb(63, 17, 17);
+  color: #fff;
+  padding: 7px;
+}
+
+::-webkit-scrollbar {
+  width: 0em;
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    column-gap: 10px;
+    position: relative;
+    grid-template-areas:
+      "navbar main-content main-content  new"
+      "sidebar main-content main-content  new";
+  }
+
+  nav {
+    flex-direction: column;
+    grid-area: navbar;
+    position: relative;
+  }
+
+  nav div {
+    text-align: center;
+    border: none;
+    padding: 12px 0;
+  }
+
+  aside {
+    grid-area: sidebar;
+    width: 20vw;
+    height: 55vh;
+    overflow: scroll;
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  aside h4 {
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+  }
+
+  /* styling items */
+
+  .numberOfItems {
+    column-gap: 1px;
+  }
+
+  .number-of-pieces {
+    font-size: 0.9rem;
+  }
+
+  .cart-img {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .btn {
+    color: #fff;
+    background-color: rgb(63, 17, 17);
+    padding: 4px;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  /* Total Price && cart head */
+
+  .total-price-div,
+  .cart-head {
+    padding: 7px;
+  }
+
+  /* main Content*/
+
+  main {
+    grid-area: main-content;
+    margin-left: -15px;
+    padding: 0 0 20px 0px;
+    width: 900px;
+    margin-bottom: 15px;
+  }
+
+  .new {
+    grid-area: new;
+    align-self: start;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .clear-cart,
+  .send-your-order {
+    padding: 5px;
+  }
+}
+
+.products-container {
+  display: flex;
+  flex-flow: wrap;
+  padding: 1em;
+  gap: 1.4em;
+}
+
+.top-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-name {
+  margin-bottom: 2px;
+}
+
+.bottom-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-price {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #66ff33;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  padding: 3px 10px;
+  font-size: 1rem;
+}
+
+/* Shopping cart */
+
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* footer */
+
+footer {
+  border-top: 3px double #ff9999;
+  line-height: 1.5rem;
+}
+
+.name-footer {
+  margin: 5px 0px;
+  color: #aa5151;
+  font-weight: bold;
+}
+
+footer span {
+  color: #330000;
+  text-transform: capitalize;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,58 @@
+﻿Chocolate factory ÚWT
+
+### Navigation: ### 
+index
+offer
+order
+contact
+
+
+### Shopping cart: ### 
+Shopping cart
+is empty
+
+
+### Main content: ### 
+Offer
+
+Dary mora
+dary_mora.jpg
+2.62
+
+Orechové srdiečko
+orechove_srdiecko.jpg
+2.49
+
+Diamant
+diamant.jpg
+2.82
+
+Hroch
+hroch.jpg
+4.15
+
+Motorka
+motorka.jpg
+3.65
+
+Panda
+panda.jpg
+10.79
+
+Čokoládový mix
+cokoladovy_mix.jpg
+1.96
+
+Črievička
+crievicka.jpg
+6.80
+
+
+### News: ### 
+box.png
+Novinka: Skvelý darček na každú príležitosť - 15 belgických praliniek v nádhernom balení len za 10,99 EURO. 
+
+
+### Footer: ###  
+(COPYRIGHT) ÚWT team, Mlynská dolina, 842 48 Bratislava, cokolada-pralinky.cz, darkydnes.cz, sk.wikipedia.org, 2016,
+Contact: coko@uwt.sk, tel: +421 2 123 456
